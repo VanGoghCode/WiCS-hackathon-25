@@ -1,54 +1,131 @@
-# React + TypeScript + Vite
+# Wooden Wardrobe
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A personal closet organizer and outfit generator web application built with React and TypeScript.
 
-Currently, two official plugins are available:
+## Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Wooden Wardrobe helps users manage their clothing items and generate outfit recommendations. The application features a wooden-themed UI with amber color accents, providing a warm and inviting user experience.
 
-## Expanding the ESLint configuration
+## Features
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **Wardrobe Management**: Add, view, and organize clothing items by category
+- **Outfit Generation**: Create outfit combinations based on your wardrobe
+- **Smart Color Detection**: Automatically detects dominant colors from uploaded images
+- **Weather-Based Suggestions**: Tag items with suitable weather conditions
+- **Style Categories**: Organize items by style (casual, formal) and category (tops, bottoms, shoes, etc.)
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## Tech Stack
+
+- React 19
+- TypeScript
+- Tailwind CSS for styling
+- Vite as the build tool
+- UUID for unique identifier generation
+
+## Component Structure
+
+### Common Components
+- `Button`: Customizable button with different variants
+- `ClothingCard`: Card display for clothing items
+- `ColorInput`: Color picker with presets and custom selection
+- `LoadingSpinner`: Loading indicator
+- `SelectInput`: Dropdown selector component
+- `UploadModal`: Modal for adding new clothing items
+
+### Page Components
+- `Header`: Application header with navigation and action buttons
+- `Footer`: Footer with links and contact information
+
+## Getting Started
+
+### Prerequisites
+- Node.js (version 16 or higher)
+- npm or yarn
+
+### Installation
+
+```bash
+# Clone the repository
+git clone [repository-url]
+
+# Navigate to the project directory
+cd wooden-wardrobe
+
+# Install dependencies
+npm install
+# or
+yarn install
+
+# Start the development server
+npm run dev
+# or
+yarn dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Application Flow
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
 ```
+┌─────────────────┐     ┌─────────────────┐     ┌─────────────────┐
+│                 │     │                 │     │                 │
+│  User browses   │────▶│  User uploads   │────▶│   Item added    │
+│    wardrobe     │     │   new items     │     │   to wardrobe   │
+│                 │     │                 │     │                 │
+└─────────────────┘     └─────────────────┘     └─────────────────┘
+        │                                               │
+        │                                               │
+        ▼                                               ▼
+┌─────────────────┐     ┌─────────────────┐     ┌─────────────────┐
+│                 │     │                 │     │                 │
+│  User generates │◀────│  Application    │◀────│    Items are    │
+│     outfit      │     │ processes items │     │  categorized    │
+│                 │     │                 │     │                 │
+└─────────────────┘     └─────────────────┘     └─────────────────┘
+```
+
+## Key Features Implementation
+
+### Image Color Detection
+The application can detect dominant colors from uploaded images to help categorize clothing items correctly.
+
+### Clothing Categories
+Items are organized into main categories and subcategories:
+- Tops: shirts, t-shirts
+- Bottoms: jeans, pants, shorts
+- Shoes: formal, sneakers, sports
+- Accessories: watches (analog, digital, smart)
+
+### Weather & Style Tagging
+Each item can be tagged with:
+- Weather suitability: summer, fall, cold, rainy
+- Style: casual, formal
+
+## Development Commands
+
+```bash
+# Start development server
+npm run dev
+
+# Build for production
+npm run build
+
+# Preview production build
+npm run preview
+
+# Lint code
+npm run lint
+
+# Build CSS
+npm run build:css
+
+# Watch CSS changes
+npm run watch:css
+```
+
+## Notes
+
+- The API endpoint for uploading images is configured to `https://54.90.107.6:5000/upload`
+- The project uses a wooden theme with amber color palette for UI elements
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
