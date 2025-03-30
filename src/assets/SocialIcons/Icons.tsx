@@ -65,7 +65,7 @@ export const VIcon: React.FC = () => (
         <path
           d="M2.5 2 L12 20 L21.5 2"
           stroke="black"
-          stroke-width="1.8"
+          strokeWidth="1.8"
           fill="none"
         />
       </mask>
@@ -74,14 +74,14 @@ export const VIcon: React.FC = () => (
     <path
       d="M2 2 L12 21 L22 2"
       stroke="currentColor"
-      stroke-width="2.5"
+      strokeWidth="2.5"
       fill="none"
     />
 
     <path
       d="M2 2 L12 21 L22 2"
       stroke="currentColor"
-      stroke-width="2.5"
+      strokeWidth="2.5"
       fill="none"
       mask="url(#cutout)"
     />

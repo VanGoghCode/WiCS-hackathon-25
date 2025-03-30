@@ -7,7 +7,7 @@
   --wood-medium: #c4a484;
   --wood-dark: #8b572a;
   --wood-darker: #61401e;
-  --wood-grain: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0h100v100H0z' fill='%23c4a484'/%3E%3Cpath d='M0 10c30-5 75 5 100 0M0 30c30-5 75 5 100 0M0 50c30-5 75 5 100 0M0 70c30-5 75 5 100 0M0 90c30-5 75 5 100 0' stroke='%23a88a6a' stroke-width='1' fill='none' opacity='0.3'/%3E%3C/svg%3E");
+  --wood-grain: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0h100v100H0z' fill='%23c4a484'/%3E%3Cpath d='M0 10c30-5 75 5 100 0M0 30c30-5 75 5 100 0M0 50c30-5 75 5 100 0M0 70c30-5 75 5 100 0M0 90c30-5 75 5 100 0' stroke='%23a88a6a' strokeWidth='1' fill='none' opacity='0.3'/%3E%3C/svg%3E");
 }
 
 body {
