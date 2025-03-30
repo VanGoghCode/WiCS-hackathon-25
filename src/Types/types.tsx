@@ -81,7 +81,7 @@ export interface SelectInputProps {
   onChange: (value: string) => void;
   placeholder: string;
   disabled?: boolean;
-  required?: boolean;
+  required?: boolean
 }
 
 export interface ColorInputProps {
