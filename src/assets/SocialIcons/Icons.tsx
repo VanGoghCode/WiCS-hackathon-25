@@ -1,4 +1,4 @@
-// AI Generated
+// AI Generated.
 
 import React from "react";
 
