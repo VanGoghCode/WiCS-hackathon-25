@@ -104,7 +104,7 @@ const Home: React.FC = () => {
       subcategory: i % 4 === 0 ? 'shirt' : i % 4 === 1 ? 'pants' : i % 4 === 2 ? 'watch' : 'shoes',
       color: i % 3 === 0 ? 'blue' : i % 3 === 1 ? 'red' : 'black',
       style: i % 2 === 0 ? 'casual' : 'formal',
-      imageUrl: `https://via.placeholder.com/150?text=Item${i}`,
+      imageUrl: `http://via.placeholder.com/150?text=Item${i}`,
       imageName: `item-${i}.jpg`,
       dateAdded: new Date().toISOString()
     }));
