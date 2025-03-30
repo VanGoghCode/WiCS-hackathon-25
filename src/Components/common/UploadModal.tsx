@@ -293,7 +293,7 @@ const UploadModal: React.FC<UploadModalProps> = ({
         formData.append("category", newItem.category);
         formData.append("color", newItem.color);
 
-        const response = await fetch("http://54.90.107.6:5000/upload", {
+        const response = await fetch("https://54.90.107.6:5000/upload", {
           method: "POST",
           body: formData,
         });

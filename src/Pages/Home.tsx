@@ -30,7 +30,7 @@ const Home: React.FC = () => {
     const fetchClothingItems = async () => {
       try {
         setLoading(true);
-        const apiUrl = `http://54.90.107.6:5000/images?userId=${USER_ID}`;
+        const apiUrl = `https://54.90.107.6:5000/images?userId=${USER_ID}`;
         
         const response = await fetch(apiUrl);
         
@@ -104,7 +104,7 @@ const Home: React.FC = () => {
       subcategory: i % 4 === 0 ? 'shirt' : i % 4 === 1 ? 'pants' : i % 4 === 2 ? 'watch' : 'shoes',
       color: i % 3 === 0 ? 'blue' : i % 3 === 1 ? 'red' : 'black',
       style: i % 2 === 0 ? 'casual' : 'formal',
-      imageUrl: `http://via.placeholder.com/150?text=Item${i}`,
+      imageUrl: `https://via.placeholder.com/150?text=Item${i}`,
       imageName: `item-${i}.jpg`,
       dateAdded: new Date().toISOString()
     }));
@@ -135,7 +135,7 @@ const Home: React.FC = () => {
       setOutfitError(null);
       
       const randomWeather = WEATHER_OPTIONS[Math.floor(Math.random() * WEATHER_OPTIONS.length)];
-      const apiUrl = `http://54.90.107.6:5000/recommend?weather=${randomWeather}&userId=${USER_ID}`;
+      const apiUrl = `https://54.90.107.6:5000/recommend?weather=${randomWeather}&userId=${USER_ID}`;
       
       const response = await fetch(apiUrl);
       

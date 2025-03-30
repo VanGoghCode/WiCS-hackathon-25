@@ -97,7 +97,7 @@ export const generateS3Url = (
   subcategory: string,
   imageName: string
 ): string => {
-  return `http://wics-cloth-recommender-images.s3.amazonaws.com/${userId}/${style}/${category}/${subcategory}/${imageName}`;
+  return `https://wics-cloth-recommender-images.s3.amazonaws.com/${userId}/${style}/${category}/${subcategory}/${imageName}`;
 };
 
 export type S3ImageParams = {
